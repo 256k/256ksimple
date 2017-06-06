@@ -66,7 +66,11 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 
   $postcatobj = get_the_category();
-  $postcat = $postcatobj[0]->cat_name;
+  $postcat = "";
+  foreach($postcatobj as $value) {
+    $postcat .= $value->cat_name . " ";
+  }
+  
   ?>
   <div class="gallery-box <?php echo $postcat ?> ">
     <a href="<?php echo $postlink; ?>">
