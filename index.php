@@ -69,7 +69,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
   $postcat = $postcatobj[0]->cat_name;
   ?>
   <div class="gallery-box <?php echo $postcat ?> ">
-    <div class="gallery-box-thumb" style="background-image: url('<?php echo $thumbnailvar ?>')"></div>
+    <a href="<?php echo $postlink; ?>">
+    <div class="gallery-box-thumb" style="background-image: url('<?php echo $thumbnailvar ?>')"></div></a>
     
       
       <a href="<?php echo $postlink; ?>" target="_blank">
