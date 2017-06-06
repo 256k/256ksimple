@@ -1,0 +1,388 @@
+/*
+Theme Name: 256k simple
+
+
+Description:very simple single page theme
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentyseventeen
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/*@import "../twentyseventeen/style.css";*/
+
+* {
+  box-sizing: border-box;
+}
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+  
+#fp-hero {
+  text-align: center;
+  color: white;
+}
+
+#fp-hero .container {
+  max-width: 800px;
+  margin: auto;
+}
+
+#fp-hero .flex-row {
+  padding: 100px 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#fp-hero .fp-hero-title {
+  background-image: url("http://www.256klabs.com/wpdev/wp-content/uploads/2017/04/bk2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#fp-hero .fp-hero-title img {
+  padding: 0;
+  margin: 0;
+  height: 400px;
+}
+
+#fp-hero .fp-hero-title h1 {
+  text-transform: uppercase;
+  font-size: 500%;
+  padding: 0;
+  margin: 0;
+}
+
+#fp-hero .fp-hero-title p {
+  font-size: 200%;
+  padding: 0;
+  margin: 0;
+}
+
+#fp-hero .fp-hero-message {
+  background: #3e294e;
+}
+
+#fp-hero .fp-hero-message .flex-row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#fp-hero .fp-hero-message h1 {
+  font-size: 68px;
+}
+
+#fp-hero .fp-hero-message p {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', cursive;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.nav {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #462c58;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav a h1 {
+  margin: 0;
+  text-align: center;
+  font-weight: 400;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  width: 90%;
+  margin: auto;
+}
+
+.title h1 {
+  padding: 0;
+  padding-left: 0;
+  font-size: 4em;
+  margin: 60px 0 60px 0;
+  font-weight: 600;
+  color: #462c58;
+  
+}
+
+.title p {
+  font-size: 2em;
+  width: 80%;
+  margin: auto;
+  color: #462c58;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content:  flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  min-height: 400px;
+  max-width: 1500px;
+  margin: 20px auto;
+}
+
+
+.filter-nav {
+  width: 100%;
+}
+
+.filter-list {
+  padding: 0 30px;
+}
+.filter-nav ul {
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2em;
+  color: #462c58;
+  max-width: 1500px;
+}
+
+.filter-nav-item {
+  padding: 0;
+  opacity: 0.5;
+  transition: 200ms ease-in-out;
+  border-bottom: 4px solid transparent;
+  
+}
+.filter-nav-item:hover {
+  cursor: pointer;
+  opacity: 1;
+  border-bottom: 4px solid #462c58;
+}
+
+.gallery-box {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: 28%;
+  min-width: 300px;
+  padding: 20px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.active {
+  border-bottom: 4px solid #462c58;
+  opacity: 1;
+}
+
+
+.disapear {
+  min-width: 0;
+  width: 0;
+  height: 0;
+  padding: 0;
+  flex-grow: 0;
+  opacity: 0 !important;
+
+}
+
+
+
+.fade-init {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+  position: relative;
+  top: 40px;
+}
+.fadein-animation {
+  opacity: 1;
+  top: 0;
+  
+}
+
+.gallery-box-thumb {
+  
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gallery-box-title {
+  color: #462c58;
+  margin: 30px 0;
+  font-weight: 100;
+  font-size: 1em;
+  
+}
+
+.gallery-box-title h2 {
+  margin: -20px 0;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+}
+
+
+
+
+
+.code-sites {
+  width: 90%;
+  
+  margin: auto;
+  margin-bottom: 60px;
+}
+.code-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.code-box {
+  padding: 3vw;
+  display: flex;
+  margin: auto;
+  width: 40%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.code-box .icon {
+  font-size: 10em;
+  color: #462c58;
+}
+
+.code-info  {
+  font-size: 28px;
+  text-align: center;
+  color: #462c58;
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.code-info a {
+  margin: 20px;
+  padding:10px 20px;
+  border: 1px solid #462c58;
+  transition: 300ms ease-in-out
+  
+}
+.code-info a:hover {
+  background: #462c58;
+  color: white;
+}
+
+
+
+/*footer*/
+
+.footer {
+  width: 100%;
+  background: #462c58;
+}
+
+.footer-container {
+  color: white;
+  font-size: 2em;
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+
+
+
+
+
+/* media queries*/
+
+@media screen and (max-width: 800px) {
+  .flex-row {
+    flex-direction: column;
+  }
+  #fp-hero .fp-hero-message p {
+    font-size: 1.3em;
+    padding: 0 20px;
+  }
+  
+  .title h1 {
+    font-size: 3em;
+  }
+  .title p {
+    font-size: 1.5em;
+  }
+  .gallery-box {
+    
+  }
+  .filter-nav ul {
+    font-size: 1.5em;
+  }
+  .code-container {
+    flex-direction: column;
+  }
+  .code-box {
+    width: 80%;
+  }
+  
+  
+  
+  
+}
