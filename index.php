@@ -73,7 +73,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
   
   ?>
   <div class="gallery-box <?php echo $postcat ?> ">
-    <a href="<?php echo $postlink; ?>">
+    <a target="_blank" href="<?php echo $postlink; ?>">
     <div class="gallery-box-thumb" style="background-image: url('<?php echo $thumbnailvar ?>')"></div></a>
     
       
