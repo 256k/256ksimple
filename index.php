@@ -77,7 +77,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
     <div class="gallery-box-thumb" style="background-image: url('<?php echo $thumbnailvar ?>')"></div></a>
     
       
-      <a href="<?php echo $postlink; ?>" target="_blank">
+      <a target="_blank" href="<?php echo $postlink; ?>" target="_blank">
         <div class="gallery-box-title">
         <h2><?php echo the_title(); ?></h2>
         </div>
